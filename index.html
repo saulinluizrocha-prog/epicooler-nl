@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EpiCooler – Weltweite Nr. 1 | Jetzt Sonderpreis sichern</title>
-  <meta name="description" content="Das EpiCooler – kompakte Kühlung für Zuhause, Büro oder unterwegs. Über 250.000 Verkäufe in 24 Stunden. Jetzt mit Sonderrabatt bestellen!" />
+  <title>EpiCooler Nederland – Wereldwijd Nr. 1 | Bestel Nu met 60% Korting</title>
+  <meta name="description" content="De EpiCooler – compacte koeling voor thuis, kantoor of onderweg. Al 250.000+ verkopen. Bestel nu met exclusieve fabriekskorting!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,55 +13,58 @@
 
     :root {
       --blue: #1960FF;
-      --green: #2E7A36;
+      --green: #2A7A38;
       --yellow: #E8BF00;
-      --black: #000000;
+      --red: #E63946;
+      --black: #0D0D0D;
       --white: #FFFFFF;
-      --gray: #F0F0F0;
+      --gray: #F4F4F7;
       --dark-gray: #333;
-      --max-width: 1200px;
+      --max-width: 1160px;
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--black);
-      background: var(--white);
-      overflow-x: hidden;
-    }
+    body { font-family: 'Poppins', sans-serif; color: var(--black); background: var(--white); overflow-x: hidden; }
 
     /* ── TOPBAR ── */
     .topbar {
       background: var(--black);
       color: var(--white);
       text-align: center;
-      padding: 10px 20px;
-      font-size: 15px;
+      padding: 11px 20px;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.3px;
     }
-    .topbar span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
     .topbar .pulse-dot {
-      width: 10px; height: 10px;
+      display: inline-block;
+      width: 9px; height: 9px;
       background: #FF4444;
       border-radius: 50%;
-      animation: pulse 1.5s infinite;
+      animation: pulse 1.4s infinite;
+      vertical-align: middle;
+      margin-right: 8px;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.7; }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:.7} }
+
+    /* ── NAVBAR ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid #eee;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
+    .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--black); }
+    .logo span { color: var(--blue); }
 
     /* ── HERO ── */
-    .hero {
-      background: var(--white);
-      padding: 70px 20px 60px;
-    }
+    .hero { background: var(--white); padding: 65px 20px 55px; }
     .hero .container {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -73,166 +76,170 @@
     .hero-text { flex: 1; min-width: 300px; }
     .hero-image { flex: 1; min-width: 280px; text-align: center; }
 
-    .badge {
+    .badge-stars {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 14px;
+      gap: 8px;
+      font-size: 13px;
       font-weight: 600;
-      color: var(--dark-gray);
-      margin-bottom: 18px;
+      color: #555;
       background: #fff8e1;
       border: 1px solid var(--yellow);
       border-radius: 50px;
-      padding: 5px 14px;
+      padding: 6px 16px;
+      margin-bottom: 20px;
     }
-    .badge .stars { color: var(--yellow); letter-spacing: 1px; }
+    .badge-stars .stars { color: var(--yellow); font-size: 15px; }
 
     .hero h1 {
-      font-size: clamp(26px, 4vw, 40px);
-      font-weight: 700;
-      line-height: 1.25;
+      font-size: clamp(24px, 3.8vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
       color: var(--black);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-    .hero-subtitle {
-      font-size: clamp(15px, 2vw, 19px);
+    .hero h1 span { color: var(--blue); }
+    .hero-sub {
+      font-size: clamp(14px, 1.8vw, 18px);
       font-weight: 300;
-      color: #444;
-      margin-bottom: 28px;
-      line-height: 1.6;
+      color: #555;
+      margin-bottom: 26px;
+      line-height: 1.65;
     }
 
-    .checklist {
-      list-style: none;
-      margin-bottom: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .checklist li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      font-weight: 400;
-    }
-    .checklist li .icon { color: var(--blue); font-size: 20px; flex-shrink: 0; }
+    .checklist { list-style: none; margin-bottom: 30px; display: flex; flex-direction: column; gap: 11px; }
+    .checklist li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; }
+    .checklist li .ck { color: var(--blue); font-size: 18px; flex-shrink: 0; }
 
-    .btn-primary {
-      display: inline-block;
-      background: var(--black);
+    .btn-cta {
+      display: block;
+      background: var(--blue);
       color: var(--white);
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(16px, 2.5vw, 22px);
-      font-weight: 600;
-      padding: 18px 40px;
+      font-size: clamp(15px, 2.2vw, 20px);
+      font-weight: 700;
+      padding: 18px 30px;
       border-radius: 12px;
       text-decoration: none;
-      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      text-align: center;
+      transition: background .3s, transform .2s, box-shadow .3s;
       border: none;
       cursor: pointer;
-      text-align: center;
-      width: 100%;
-      max-width: 500px;
+      max-width: 480px;
     }
-    .btn-primary:hover {
-      background: var(--green);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(46,122,54,0.4);
+    .btn-cta:hover { background: #0040CC; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(25,96,255,.35); }
+
+    .security-line {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .security-line span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #888;
+      font-weight: 400;
     }
 
     .hero-image img {
       width: 100%;
-      max-width: 420px;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-      transition: transform 0.4s;
+      max-width: 440px;
+      border-radius: 22px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.13);
+      transition: transform .4s;
     }
     .hero-image img:hover { transform: scale(1.02); }
 
-    /* ── BRANDS ── */
-    .brands {
-      background: var(--black);
-      padding: 24px 20px;
-      overflow: hidden;
-    }
-    .brands-track {
+    /* ── MEDIA BAR ── */
+    .media-bar { background: var(--gray); padding: 26px 20px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+    .media-label { text-align: center; font-size: 12px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    .media-logos {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
     }
-    .brands-track img {
-      height: 32px;
-      filter: invert(1) brightness(0.8);
-      opacity: 0.75;
-      transition: opacity 0.3s;
+    .media-logos .m-logo {
+      font-size: 17px;
+      font-weight: 800;
+      color: #aaa;
+      letter-spacing: -0.5px;
+      transition: color .3s;
+      font-style: italic;
     }
-    .brands-track img:hover { opacity: 1; }
+    .media-logos .m-logo:hover { color: #555; }
 
-    /* ── SECTION HEADER ── */
-    .section-header {
+    /* ── RATING SECTION ── */
+    .rating-section { padding: 60px 20px; background: var(--white); }
+    .rating-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .rating-big { text-align: center; }
+    .rating-big .num { font-size: 72px; font-weight: 800; color: var(--black); line-height: 1; }
+    .rating-big .stars-lg { color: var(--yellow); font-size: 28px; letter-spacing: 2px; display: block; margin: 6px 0; }
+    .rating-big .count { font-size: 13px; color: #888; }
+    .rating-divider { width: 1px; height: 80px; background: #ddd; }
+    .rating-text h2 { font-size: clamp(22px, 3vw, 32px); font-weight: 700; margin-bottom: 8px; }
+    .rating-text p { font-size: 15px; color: #666; font-weight: 300; max-width: 380px; line-height: 1.65; }
+
+    .rating-badges {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .r-badge {
+      background: var(--gray);
+      border-radius: 10px;
+      padding: 10px 18px;
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto 50px;
-      padding: 0 20px;
+      font-size: 13px;
     }
-    .section-header h2 {
-      font-size: clamp(22px, 3.5vw, 38px);
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 14px;
-    }
-    .section-header p {
-      font-size: clamp(15px, 2vw, 20px);
-      font-weight: 300;
-      color: #555;
-      line-height: 1.6;
-    }
-    .divider-line {
-      width: 80px;
-      height: 5px;
-      background: var(--blue);
-      border-radius: 3px;
-      margin: 18px auto 0;
-    }
+    .r-badge strong { display: block; font-size: 18px; font-weight: 700; color: var(--blue); }
 
-    /* ── FEATURES GRID ── */
-    .features { padding: 80px 20px; }
+    /* ── SECTION GENERIC ── */
+    .section-title { text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 20px; }
+    .section-title h2 { font-size: clamp(22px, 3.2vw, 36px); font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
+    .section-title p { font-size: clamp(14px, 1.7vw, 18px); color: #666; font-weight: 300; line-height: 1.65; }
+    .blue-rule { width: 70px; height: 5px; background: var(--blue); border-radius: 3px; margin: 16px auto 0; }
+
+    /* ── FEATURES ── */
+    .features { padding: 80px 20px; background: var(--gray); }
     .features-grid {
       max-width: var(--max-width);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 24px;
     }
-    .feature-card {
-      background: var(--gray);
+    .feat-card {
+      background: var(--white);
       border-radius: 16px;
-      padding: 30px 24px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 28px 22px;
       text-align: center;
+      transition: transform .3s, box-shadow .3s;
+      border: 1px solid #eee;
     }
-    .feature-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
-    }
-    .feature-card .feature-icon {
-      font-size: 36px;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .feature-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-    .feature-card p { font-size: 14px; color: #666; font-weight: 300; line-height: 1.6; }
+    .feat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+    .feat-card .fi { font-size: 38px; margin-bottom: 12px; display: block; }
+    .feat-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .feat-card p { font-size: 13px; color: #777; font-weight: 300; line-height: 1.6; }
 
     /* ── BENEFIT BLOCKS ── */
-    .benefits { background: var(--gray); }
-    .benefit-block {
-      padding: 70px 20px;
-    }
-    .benefit-block:nth-child(even) { background: var(--white); }
+    .benefit { padding: 72px 20px; }
+    .benefit:nth-child(odd) { background: var(--white); }
+    .benefit:nth-child(even) { background: var(--gray); }
     .benefit-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -241,474 +248,613 @@
       gap: 60px;
       flex-wrap: wrap;
     }
-    .benefit-inner.reverse { flex-direction: row-reverse; }
-    .benefit-content { flex: 1; min-width: 280px; }
-    .benefit-img { flex: 1; min-width: 260px; text-align: center; }
-    .benefit-img img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    }
-    .benefit-tag {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    .benefit-content h2 {
-      font-size: clamp(22px, 3vw, 30px);
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 16px;
-    }
-    .blue-bar {
-      width: 70px; height: 5px;
-      background: var(--blue);
-      border-radius: 3px;
-      margin-bottom: 18px;
-    }
-    .benefit-content p {
-      font-size: clamp(15px, 1.8vw, 19px);
-      font-weight: 300;
-      color: #555;
-      line-height: 1.75;
-    }
+    .benefit-inner.rev { flex-direction: row-reverse; }
+    .benefit-copy { flex: 1; min-width: 280px; }
+    .benefit-pic { flex: 1; min-width: 260px; text-align: center; }
+    .benefit-pic img { width: 100%; max-width: 420px; border-radius: 20px; box-shadow: 0 14px 44px rgba(0,0,0,.1); }
+    .b-tag { font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+    .benefit-copy h2 { font-size: clamp(20px, 2.8vw, 30px); font-weight: 700; line-height: 1.4; margin-bottom: 14px; }
+    .benefit-copy .bline { width: 60px; height: 4px; background: var(--blue); border-radius: 3px; margin-bottom: 16px; }
+    .benefit-copy p { font-size: clamp(14px, 1.6vw, 17px); font-weight: 300; color: #555; line-height: 1.75; }
 
-    /* ── STARS SECTION ── */
-    .star-features { padding: 80px 20px; background: var(--white); }
-    .star-features-inner {
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 80px 20px; background: var(--white); }
+    .testi-grid {
       max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .testi-card {
+      background: var(--gray);
+      border-radius: 18px;
+      padding: 28px 24px;
+      border: 1px solid #e8e8e8;
+      transition: transform .3s, box-shadow .3s;
+      position: relative;
+    }
+    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,.09); }
+    .testi-card .quote-mark { font-size: 48px; color: var(--blue); opacity: .15; position: absolute; top: 16px; right: 20px; line-height: 1; font-weight: 900; }
+    .testi-stars { color: var(--yellow); font-size: 16px; letter-spacing: 1px; margin-bottom: 12px; }
+    .testi-card p { font-size: 14px; color: #555; line-height: 1.7; font-weight: 400; margin-bottom: 20px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--blue); }
+    .testi-author .name { font-size: 14px; font-weight: 700; }
+    .testi-author .city { font-size: 12px; color: #999; font-weight: 400; }
+    .verified-badge { font-size: 11px; color: var(--green); font-weight: 600; display: flex; align-items: center; gap: 3px; margin-top: 2px; }
+
+    /* ── GUARANTEE ── */
+    .guarantee { padding: 70px 20px; background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%); }
+    .guarantee-inner {
+      max-width: 800px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       gap: 40px;
+      background: var(--white);
+      border-radius: 24px;
+      padding: 50px 40px;
+      box-shadow: 0 10px 40px rgba(25,96,255,.1);
+      border: 2px solid rgba(25,96,255,.15);
       flex-wrap: wrap;
     }
-    .star-col { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 22px; }
-    .star-img { flex: 0 0 320px; text-align: center; }
-    .star-img img { width: 100%; max-width: 320px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .star-item { display: flex; align-items: center; gap: 12px; }
-    .star-item .star { color: var(--yellow); font-size: 22px; flex-shrink: 0; }
-    .star-item span { font-size: 16px; font-weight: 400; }
+    .guarantee-icon { font-size: 80px; flex-shrink: 0; text-align: center; }
+    .guarantee-text h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; margin-bottom: 12px; }
+    .guarantee-text p { font-size: 15px; color: #555; font-weight: 300; line-height: 1.7; }
 
-    /* ── URGENCY ── */
-    .urgency {
-      background: linear-gradient(135deg, #000 0%, #1a1a2e 100%);
-      color: var(--white);
-      padding: 80px 20px;
+    /* ── PRICING CTA ── */
+    .pricing { padding: 80px 20px; background: var(--white); }
+    .pricing-box {
+      max-width: 580px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+      border: 2px solid #eee;
+      overflow: hidden;
       text-align: center;
     }
-    .urgency h2 {
-      font-size: clamp(26px, 4vw, 44px);
+    .pricing-header {
+      background: var(--blue);
+      color: var(--white);
+      padding: 16px 20px;
+      font-size: 16px;
       font-weight: 700;
-      margin-bottom: 16px;
+      letter-spacing: 0.3px;
     }
-    .urgency p {
-      font-size: clamp(15px, 2vw, 19px);
-      font-weight: 300;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 36px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    .pricing-body { padding: 36px 32px 40px; }
+    .price-original {
+      font-size: 18px;
+      color: #aaa;
+      text-decoration: line-through;
+      margin-bottom: 6px;
     }
-    .btn-urgency {
-      display: inline-block;
-      background: linear-gradient(135deg, #1960FF, #0040CC);
+    .price-main {
+      font-size: clamp(50px, 8vw, 72px);
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .price-main sup { font-size: 28px; vertical-align: super; }
+    .price-per { font-size: 16px; color: #888; margin-bottom: 24px; }
+    .price-badges {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .p-badge {
+      border-radius: 12px;
+      padding: 14px 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .p-badge.green { background: #e8f7eb; color: var(--green); }
+    .p-badge.blue { background: #e8f0ff; color: var(--blue); }
+    .p-badge strong { display: block; font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+    .btn-buy {
+      display: block;
+      background: var(--blue);
       color: var(--white);
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(16px, 2.5vw, 22px);
+      font-size: clamp(15px, 2.5vw, 20px);
       font-weight: 700;
-      padding: 20px 50px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.3s;
-      border: none;
-      cursor: pointer;
-      animation: glow 2s ease-in-out infinite;
-    }
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(25,96,255,0.5); }
-      50% { box-shadow: 0 0 40px rgba(25,96,255,0.8); }
-    }
-    .btn-urgency:hover { transform: translateY(-3px); }
-
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-    .count-box {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
-      padding: 16px 24px;
-      min-width: 80px;
-      backdrop-filter: blur(10px);
-    }
-    .count-box .num {
-      font-size: 36px;
-      font-weight: 700;
-      display: block;
-      line-height: 1;
-    }
-    .count-box .label {
-      font-size: 12px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.7);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* ── TRUST BADGES ── */
-    .trust { padding: 50px 20px; background: var(--gray); }
-    .trust-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 24px;
-    }
-    .trust-card {
-      background: var(--white);
+      padding: 20px 30px;
       border-radius: 14px;
-      padding: 24px 20px;
+      text-decoration: none;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: background .3s, transform .2s, box-shadow .3s;
+      width: 100%;
+      animation: glow 2.2s ease-in-out infinite;
     }
-    .trust-card .t-icon { font-size: 32px; margin-bottom: 10px; display: block; }
-    .trust-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    .trust-card p { font-size: 12px; color: #777; font-weight: 300; }
+    .btn-buy:hover { background: #0040CC; transform: translateY(-2px); }
+    @keyframes glow {
+      0%,100% { box-shadow: 0 0 18px rgba(25,96,255,.45); }
+      50% { box-shadow: 0 0 38px rgba(25,96,255,.75); }
+    }
+    .trust-icons { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+    .trust-icons span { font-size: 12px; color: #999; display: flex; align-items: center; gap: 4px; }
 
-    /* ── FOOTER CTA ── */
-    .footer-cta {
-      background: var(--white);
-      padding: 80px 20px;
+    /* ── COUNTDOWN ── */
+    .urgency-bar {
+      background: linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 100%);
+      color: var(--white);
+      padding: 50px 20px;
       text-align: center;
     }
-    .footer-cta h2 {
-      font-size: clamp(22px, 3.5vw, 36px);
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .footer-cta p {
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 32px;
-    }
+    .urgency-bar h3 { font-size: clamp(20px, 3vw, 30px); font-weight: 700; margin-bottom: 8px; }
+    .urgency-bar p { color: rgba(255,255,255,.7); font-size: 15px; margin-bottom: 28px; }
+    .countdown { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .count-box { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 12px; padding: 14px 20px; min-width: 75px; backdrop-filter: blur(10px); }
+    .count-box .num { font-size: 34px; font-weight: 800; display: block; line-height: 1; }
+    .count-box .lbl { font-size: 11px; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip { background: var(--gray); padding: 44px 20px; }
+    .trust-strip-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+    .ts-card { background: var(--white); border-radius: 14px; padding: 22px 16px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .ts-card .ti { font-size: 30px; margin-bottom: 8px; display: block; }
+    .ts-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .ts-card p { font-size: 11px; color: #888; }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--black);
-      color: rgba(255,255,255,0.5);
+    footer { background: var(--black); color: rgba(255,255,255,.45); text-align: center; padding: 26px 20px; font-size: 12px; }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--blue);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+    }
+    .sticky-cta a {
+      display: block;
+      background: var(--white);
+      color: var(--blue);
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
       text-align: center;
-      padding: 24px 20px;
-      font-size: 13px;
+      letter-spacing: 0.3px;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 76px; }
       .hero .container { flex-direction: column; }
       .hero-text { order: 2; }
       .hero-image { order: 1; }
-      .benefit-inner.reverse { flex-direction: column; }
-      .star-img { display: none; }
-      .star-features-inner { flex-direction: column; }
+      .benefit-inner.rev { flex-direction: column; }
+      .rating-divider { display: none; }
+      .guarantee-inner { flex-direction: column; text-align: center; }
     }
 
-    /* ── ANIMATIONS ── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* ── FADE-UP ── */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <span>
-    <span class="pulse-dot"></span>
-    SPEZIELLES ZEITLICH BEGRENZTES ANGEBOT — JETZT SONDER-RABATT ERHALTEN
-  </span>
+  <span class="pulse-dot"></span>
+  TIJDELIJK AANBOD — ONTVANG NU JE EXCLUSIEVE FABRIEKSKORTING
 </div>
 
-<!-- HERO -->
+<!-- NAV -->
+<nav>
+  <div class="logo">Epi<span>Cooler</span></div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero">
   <div class="container">
     <div class="hero-text fade-up">
-      <div class="badge">
-        <span>WELTWEIT NR. 1 BEWERTET</span>
-        <span class="stars">★★★★½</span>
+      <div class="badge-stars">
+        WERELDWIJD NR. 1 BEOORDEELD &nbsp;<span class="stars">★★★★★</span>
       </div>
-      <h1>Das EpiCooler, über das alle sprechen — und jetzt können Sie es auch bekommen</h1>
-      <p class="hero-subtitle">Tausende haben bereits gekauft — sichern Sie sich Ihres jetzt mit exklusivem Direkt-ab-Werk-Rabatt, bevor es zu spät ist!</p>
+      <h1>De EpiCooler die iedereen in <span>Nederland</span> nu wil hebben</h1>
+      <p class="hero-sub">Duizenden tevreden klanten gingen je voor — beveilig jouw exemplaar nu met een exclusieve directe fabrieksprijs, zolang de voorraad strekt!</p>
       <ul class="checklist">
-        <li><span class="icon">✔</span> Premium-Qualität — Gebaut für die Ewigkeit</li>
-        <li><span class="icon">✔</span> Ultraschneller Versand weltweit</li>
-        <li><span class="icon">✔</span> 100% sichere &amp; verfolgte Lieferung</li>
-        <li><span class="icon">✔</span> Direkt an Ihre Tür geliefert</li>
+        <li><span class="ck">✔</span> Premiumkwaliteit — gebouwd om eeuwig mee te gaan</li>
+        <li><span class="ck">✔</span> Supersnelle verzending in heel Nederland</li>
+        <li><span class="ck">✔</span> 100% beveiligde &amp; getraceerde levering</li>
+        <li><span class="ck">✔</span> Rechtstreeks aan uw deur bezorgd</li>
+        <li><span class="ck">✔</span> 30 dagen geld-terug-garantie</li>
       </ul>
-      <a id="btn-hero-cta" class="btn-primary" href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" target="_blank" rel="nofollow">
-        JETZT SONDERPREIS HEUTE ERHALTEN
+      <a id="btn-hero" class="btn-cta" href="https://www.knownwalk.com/2GT22MM1/222S35HL/?uid=4970" target="_blank" rel="nofollow">
+        🛒 BESTEL NU MET 60% KORTING
       </a>
+      <div class="security-line">
+        <span>🔒 Veilig betalen</span>
+        <span>🚚 Snelle verzending</span>
+        <span>⭐ 30-dagen garantie</span>
+      </div>
     </div>
-    <div class="hero-image fade-up" style="transition-delay:0.2s">
-      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
-           alt="EpiCooler — Kompakte Kühlung" loading="lazy" />
+    <div class="hero-image fade-up" style="transition-delay:.2s">
+      <img src="https://get-epicooler.primeshopers.com/img/MV9IZXJvX0VwaWNvb2xlcl9OTC5qcGVn-w_500.jpeg"
+           alt="EpiCooler – Compacte koeling voor Nederland" loading="eager" />
     </div>
   </div>
 </section>
 
-<!-- BRANDS -->
-<div class="brands">
-  <div class="brands-track">
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marcas7.webp" alt="Marca parceira" loading="lazy" />
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_6.svg" alt="Marca parceira" loading="lazy" />
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_4.svg" alt="Marca parceira" loading="lazy" />
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_2.svg" alt="Marca parceira" loading="lazy" />
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_1.svg" alt="Marca parceira" loading="lazy" />
-    <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_0.svg" alt="Marca parceira" loading="lazy" />
+<!-- ═══════════════ MEDIA BAR ═══════════════ -->
+<div class="media-bar fade-up">
+  <p class="media-label">Vermeld in</p>
+  <div class="media-logos">
+    <span class="m-logo">Forbes</span>
+    <span class="m-logo">Le Monde</span>
+    <span class="m-logo">BFM TV</span>
+    <span class="m-logo">NRC</span>
+    <span class="m-logo">de Volkskrant</span>
+    <span class="m-logo">RTL Nieuws</span>
+    <span class="m-logo">Nu.nl</span>
   </div>
 </div>
 
-<!-- FEATURES SECTION -->
+<!-- ═══════════════ RATING ═══════════════ -->
+<section class="rating-section">
+  <div class="rating-inner">
+    <div class="rating-big fade-up">
+      <span class="num">4,9</span>
+      <span class="stars-lg">★★★★★</span>
+      <span class="count">+12.000 beoordelingen</span>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-text fade-up" style="transition-delay:.15s">
+      <h2>De #1 Compacte Koeler Ter Wereld</h2>
+      <p>De EpiCooler is het meest beoordeelde en geprezen koelproduct van dit moment. Onze klanten uit Nederland en heel Europa zijn enthousiast.</p>
+      <div class="rating-badges">
+        <div class="r-badge"><strong>250k+</strong> Verkopen</div>
+        <div class="r-badge"><strong>98%</strong> Tevreden</div>
+        <div class="r-badge"><strong>30</strong> Dagen garantie</div>
+        <div class="r-badge"><strong>#1</strong> In Nederland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURES GRID ═══════════════ -->
 <section class="features">
-  <div class="section-header fade-up">
-    <h2>Ein einfaches Detail, das die Art und Weise verändert hat, wie Menschen Dinge in ihrem Alltag nutzen</h2>
-    <p>Praktisch, intelligent und bereits in tausenden Haushalten — keine komplizierte Einrichtung, keine steile Lernkurve. Einfach sofortige Ergebnisse vom ersten Tag an.</p>
+  <div class="section-title fade-up">
+    <h2>Een slim detail dat de manier verandert waarop mensen dagelijks leven</h2>
+    <p>Praktisch, intelligent en al aanwezig in duizenden Nederlandse huishoudens. Geen ingewikkelde installatie — gewoon direct resultaat vanaf dag één.</p>
+    <div class="blue-rule"></div>
   </div>
   <div class="features-grid">
-    <div class="feature-card fade-up">
-      <span class="feature-icon">⚡</span>
-      <h3>Sofort einsatzbereit</h3>
-      <p>Keine komplizierte Einrichtung. Einfach auspacken und sofort nutzen.</p>
+    <div class="feat-card fade-up">
+      <span class="fi">⚡</span>
+      <h3>Direct klaar voor gebruik</h3>
+      <p>Gewoon uitpakken en meteen aan de slag. Geen moeilijke installatie nodig.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.1s">
-      <span class="feature-icon">🔗</span>
-      <h3>Einfach zu integrieren</h3>
-      <p>Passt sich nahtlos in jeden Lebensstil und jeden Raum ein.</p>
+    <div class="feat-card fade-up" style="transition-delay:.08s">
+      <span class="fi">🔗</span>
+      <h3>Eenvoudig te integreren</h3>
+      <p>Past naadloos in elke levensstijl en elke ruimte thuis of op kantoor.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.2s">
-      <span class="feature-icon">✨</span>
-      <h3>Modernes Design</h3>
-      <p>Elegantes, zeitloses Design das überall gut aussieht.</p>
+    <div class="feat-card fade-up" style="transition-delay:.16s">
+      <span class="fi">✨</span>
+      <h3>Modern design</h3>
+      <p>Elegant, tijdloos design dat overal goed staat. Een echte blikvanger.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.3s">
-      <span class="feature-icon">🧠</span>
-      <h3>Funktioniert intuitiv</h3>
-      <p>Selbsterklärend — jeder kann es sofort bedienen.</p>
+    <div class="feat-card fade-up" style="transition-delay:.24s">
+      <span class="fi">🧠</span>
+      <h3>Intuïtief in gebruik</h3>
+      <p>Zelfverklarend — iedereen kan het meteen bedienen, geen handleiding nodig.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.4s">
-      <span class="feature-icon">🏗️</span>
-      <h3>Für den täglichen Gebrauch</h3>
-      <p>Robust und langlebig, gebaut um täglich eingesetzt zu werden.</p>
+    <div class="feat-card fade-up" style="transition-delay:.32s">
+      <span class="fi">🏗️</span>
+      <h3>Gebouwd voor dagelijks gebruik</h3>
+      <p>Robuust en duurzaam — vervaardigd om dag in, dag uit te presteren.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.5s">
-      <span class="feature-icon">🛡️</span>
-      <h3>365-Tage-Garantie</h3>
-      <p>Volle Garantie für ein ganzes Jahr. Kein Risiko, nur Ergebnisse.</p>
+    <div class="feat-card fade-up" style="transition-delay:.40s">
+      <span class="fi">🛡️</span>
+      <h3>30-dagen garantie</h3>
+      <p>Volledige garantie. Geen risico, alleen resultaat. Uw tevredenheid gegarandeerd.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.6s">
-      <span class="feature-icon">🛋️</span>
-      <h3>Komfortables Design</h3>
-      <p>Ergonomisch und angenehm im täglichen Einsatz.</p>
+    <div class="feat-card fade-up" style="transition-delay:.48s">
+      <span class="fi">🛋️</span>
+      <h3>Comfortabel design</h3>
+      <p>Ergonomisch en aangenaam bij dagelijks gebruik, thuis of op kantoor.</p>
     </div>
-    <div class="feature-card fade-up" style="transition-delay:0.7s">
-      <span class="feature-icon">🔄</span>
-      <h3>Vielseitig einsetzbar</h3>
-      <p>Zuhause, im Büro oder unterwegs — überall dabei.</p>
+    <div class="feat-card fade-up" style="transition-delay:.56s">
+      <span class="fi">🔄</span>
+      <h3>Veelzijdig inzetbaar</h3>
+      <p>Thuis, op kantoor of onderweg — de EpiCooler gaat overal mee naartoe.</p>
     </div>
   </div>
 </section>
 
-<!-- BENEFIT 1 -->
-<div class="benefit-block">
+<!-- ═══════════════ BENEFIT 1 ═══════════════ -->
+<section class="benefit">
   <div class="benefit-inner fade-up">
-    <div class="benefit-content">
-      <p class="benefit-tag">Top-Trends</p>
-      <h2>Eines der meistgekauften Produkte der letzten Tage</h2>
-      <div class="blue-bar"></div>
-      <p>Das EpiCooler übertraf 250.000 Verkäufe beim Launch — in weniger als 24 Stunden. Die Nachfrage ist riesig und der Vorrat ist begrenzt.</p>
+    <div class="benefit-copy">
+      <p class="b-tag">🔥 Top Trend</p>
+      <h2>Één van de bestverkochte producten van de afgelopen weken</h2>
+      <div class="bline"></div>
+      <p>De EpiCooler oversteeg de 250.000 verkopen bij de lancering — in minder dan 24 uur. De vraag is enorm en de voorraad is beperkt. Wees er snel bij!</p>
     </div>
-    <div class="benefit-img">
+    <div class="benefit-pic">
       <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_1.png"
-           alt="EpiCooler Bestseller" loading="lazy" />
+           alt="EpiCooler Bestseller Nederland" loading="lazy" />
     </div>
   </div>
-</div>
+</section>
 
-<!-- BENEFIT 2 -->
-<div class="benefit-block" style="background:#fff;">
-  <div class="benefit-inner reverse fade-up">
-    <div class="benefit-content">
-      <p class="benefit-tag">Social Media</p>
-      <h2>Das von Influencern weltweit am meisten empfohlene Produkt in den sozialen Medien</h2>
-      <div class="blue-bar"></div>
-      <p>Tausende von Creatorn und Mikro-Prominenten beeilen sich, ihr EpiCooler zu bekommen — und posten jeden einzelnen Tag darüber.</p>
+<!-- ═══════════════ BENEFIT 2 ═══════════════ -->
+<section class="benefit">
+  <div class="benefit-inner rev fade-up">
+    <div class="benefit-copy">
+      <p class="b-tag">📱 Sociaal Media Fenomeen</p>
+      <h2>Het meest aanbevolen product door influencers wereldwijd op sociale media</h2>
+      <div class="bline"></div>
+      <p>Duizenden creators en micro-celebrities haasten zich om hun EpiCooler te krijgen — en posten er elke dag over. Ontdek waarom iedereen er al over praat!</p>
     </div>
-    <div class="benefit-img">
+    <div class="benefit-pic">
       <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_2.png"
-           alt="EpiCooler Influencer" loading="lazy" />
+           alt="EpiCooler Social Media Hit" loading="lazy" />
     </div>
   </div>
-</div>
+</section>
 
-<!-- BENEFIT 3 -->
-<div class="benefit-block">
+<!-- ═══════════════ BENEFIT 3 ═══════════════ -->
+<section class="benefit">
   <div class="benefit-inner fade-up">
-    <div class="benefit-content">
-      <p class="benefit-tag">Kategorie-Nr. 1</p>
-      <h2>Und ohne Zweifel — Das Produkt Nr. 1 in seiner Kategorie im Moment</h2>
-      <div class="blue-bar"></div>
-      <p>Es erfüllt alle Kriterien: modernes Design, mühelose Anwendung, leichte Bauweise — und vor allem 100% funktional. Genau das, worauf der Markt gewartet hat.</p>
+    <div class="benefit-copy">
+      <p class="b-tag">🏆 Categorie #1</p>
+      <h2>Zonder twijfel — het Nr. 1 product in zijn categorie op dit moment</h2>
+      <div class="bline"></div>
+      <p>Het voldoet aan alle criteria: modern design, moeiteloos gebruik, licht gewicht — en bovenal 100% functioneel. Precies waar de markt op heeft gewacht. De mensen kopen de EpiCooler niet alleen — ze worden er verliefd op.</p>
     </div>
-    <div class="benefit-img">
-      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
-           alt="EpiCooler Nr. 1" loading="lazy" />
+    <div class="benefit-pic">
+      <img src="https://get-epicooler.primeshopers.com/img/MV9IZXJvX0VwaWNvb2xlcl9OTC5qcGVn-w_500.jpeg"
+           alt="EpiCooler Nr. 1 Nederland" loading="lazy" />
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="testimonials">
+  <div class="section-title fade-up">
+    <h2>Wat Nederlandse klanten zeggen</h2>
+    <p>Ontdek hoe de EpiCooler het dagelijks leven van echte Nederlanders heeft veranderd.</p>
+    <div class="blue-rule"></div>
+  </div>
+  <div class="testi-grid">
+
+    <!-- T1 -->
+    <div class="testi-card fade-up">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Ik was in eerste instantie sceptisch, maar na één week gebruik ben ik volledig overtuigd. De EpiCooler werkt geweldig — compact, stil en effectief. Ideaal voor warme Nederlandse zomers!"</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/lars.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Lars+Berg&background=1960FF&color=fff&size=100'"
+             alt="Lars van den Berg" />
+        <div>
+          <div class="name">Lars van den Berg</div>
+          <div class="city">Amsterdam, Noord-Holland</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2 -->
+    <div class="testi-card fade-up" style="transition-delay:.1s">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Ik heb de EpiCooler als cadeau voor mijn man gekocht en hij is er dol op! Supersnel geleverd, prachtig verpakt en de kwaliteit is uitstekend. Echt de moeite waard."</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/sophie.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Sophie+Janssen&background=E8BF00&color=fff&size=100'"
+             alt="Sophie Janssen" />
+        <div>
+          <div class="name">Sophie Janssen</div>
+          <div class="city">Rotterdam, Zuid-Holland</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3 -->
+    <div class="testi-card fade-up" style="transition-delay:.2s">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Wat een fantastisch product! Ik gebruik de EpiCooler elke dag op mijn thuiskantoor. Maakt de zomer echt draaglijker. Levering in 2 dagen — top service!"</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/pieter.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Pieter+Vries&background=2A7A38&color=fff&size=100'"
+             alt="Pieter de Vries" />
+        <div>
+          <div class="name">Pieter de Vries</div>
+          <div class="city">Utrecht, Utrecht</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T4 -->
+    <div class="testi-card fade-up" style="transition-delay:.3s">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Al wekenlang zie ik dit product voorbijkomen op Instagram en TikTok, en eindelijk heb ik de stap gezet. Geen moment spijt! De kwaliteit overtreft mijn verwachtingen volledig."</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/emma.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Emma+Bakker&background=E63946&color=fff&size=100'"
+             alt="Emma Bakker" />
+        <div>
+          <div class="name">Emma Bakker</div>
+          <div class="city">Den Haag, Zuid-Holland</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T5 -->
+    <div class="testi-card fade-up" style="transition-delay:.4s">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Als ondernemer heb ik dit voor mijn hele kantoor aangeschaft. Mijn team is enthousiast! Productiviteit omhoog, klachten over de warmte verdwenen. Absoluut een aanrader voor iedereen."</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/thomas.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Thomas+Meijer&background=555&color=fff&size=100'"
+             alt="Thomas Meijer" />
+        <div>
+          <div class="name">Thomas Meijer</div>
+          <div class="city">Eindhoven, Noord-Brabant</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T6 -->
+    <div class="testi-card fade-up" style="transition-delay:.5s">
+      <span class="quote-mark">"</span>
+      <div class="testi-stars">★★★★★</div>
+      <p>"Ik heb er twee besteld — één voor thuis en één voor op mijn werk. De kortingscode heeft me een fortuin bespaard. Snelle levering, prachtig product en uitstekende klantenservice!"</p>
+      <div class="testi-author">
+        <img src="https://raw.githubusercontent.com/saulinluizrocha-prog/epicooler-nl/master/testimonials/anna.png"
+             onerror="this.src='https://ui-avatars.com/api/?name=Anna+Dijk&background=1960FF&color=fff&size=100'"
+             alt="Anna van Dijk" />
+        <div>
+          <div class="name">Anna van Dijk</div>
+          <div class="city">Groningen, Groningen</div>
+          <div class="verified-badge">✓ Geverifieerde aankoop</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ URGENCY COUNTDOWN ═══════════════ -->
+<div class="urgency-bar">
+  <h3>⏳ Aanbieding verloopt over:</h3>
+  <p>Beveilig je exemplaar nu — de voorraad is beperkt!</p>
+  <div class="countdown">
+    <div class="count-box"><span class="num" id="hours">00</span><span class="lbl">Uren</span></div>
+    <div class="count-box"><span class="num" id="minutes">00</span><span class="lbl">Minuten</span></div>
+    <div class="count-box"><span class="num" id="seconds">00</span><span class="lbl">Seconden</span></div>
   </div>
 </div>
 
-<!-- VIRAL SECTION -->
-<section style="background: var(--gray); padding: 70px 20px; text-align: center;">
-  <div class="section-header fade-up">
-    <h2>Das EpiCooler geht weltweit viral</h2>
-    <p>Und es ist bereits Teil der täglichen Routine von Tausenden von Menschen</p>
-    <div class="divider-line"></div>
-  </div>
-</section>
-
-<!-- STAR FEATURES -->
-<section class="star-features">
-  <div class="star-features-inner fade-up">
-    <div class="star-col">
-      <div class="star-item"><span class="star">★</span><span>Sofort einsatzbereit</span></div>
-      <div class="star-item"><span class="star">★</span><span>Einfach zu integrieren</span></div>
-      <div class="star-item"><span class="star">★</span><span>Modernes Design</span></div>
-      <div class="star-item"><span class="star">★</span><span>Funktioniert auf intuitive Weise</span></div>
-    </div>
-    <div class="star-img">
-      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
-           alt="EpiCooler" loading="lazy" />
-    </div>
-    <div class="star-col">
-      <div class="star-item"><span class="star">★</span><span>Für den täglichen Gebrauch gebaut</span></div>
-      <div class="star-item"><span class="star">★</span><span>365-Tage-Garantie</span></div>
-      <div class="star-item"><span class="star">★</span><span>Komfortables Design</span></div>
-      <div class="star-item"><span class="star">★</span><span>Vielseitig in verschiedenen Situationen</span></div>
+<!-- ═══════════════ GUARANTEE ═══════════════ -->
+<section class="guarantee">
+  <div class="guarantee-inner fade-up">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-text">
+      <h2>30 Dagen Geld-Terug-Garantie</h2>
+      <p>We zijn 100% zeker van de kwaliteit van de EpiCooler. Daarom bieden we een volledige garantie van 30 dagen. Niet tevreden? Stuur het gewoon terug en ontvang je volledige aankoopbedrag terug — geen vragen gesteld. Uw tevredenheid is onze prioriteit.</p>
     </div>
   </div>
 </section>
 
-<!-- URGENCY / CTA -->
-<section class="urgency">
-  <h2 class="fade-up">Das Produkt für mehr Komfort an heißen Tagen</h2>
-  <p class="fade-up" style="transition-delay:0.1s">Kompakte Kühlung für Zuhause, Büro oder unterwegs. Angebot endet bald!</p>
-
-  <div class="countdown fade-up" style="transition-delay:0.2s">
-    <div class="count-box">
-      <span class="num" id="hours">00</span>
-      <span class="label">Stunden</span>
-    </div>
-    <div class="count-box">
-      <span class="num" id="minutes">00</span>
-      <span class="label">Minuten</span>
-    </div>
-    <div class="count-box">
-      <span class="num" id="seconds">00</span>
-      <span class="label">Sekunden</span>
-    </div>
+<!-- ═══════════════ PRICING CTA ═══════════════ -->
+<section class="pricing">
+  <div class="section-title fade-up">
+    <h2>Pak Nu Je Speciale Aanbieding</h2>
+    <p>Bestel vandaag en bespaar tot 60% — zolang de voorraad strekt!</p>
   </div>
-
-  <a id="btn-urgency-cta" class="btn-urgency fade-up" href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966"
-     target="_blank" rel="nofollow" style="transition-delay:0.3s">
-    🛒 JETZT MIT SONDERRABATT BESTELLEN
-  </a>
-</section>
-
-<!-- TRUST BADGES -->
-<section class="trust">
-  <div class="trust-inner">
-    <div class="trust-card fade-up">
-      <span class="t-icon">🔒</span>
-      <h4>Sichere Zahlung</h4>
-      <p>256-bit SSL Verschlüsselung</p>
+  <div class="pricing-box fade-up" style="transition-delay:.15s">
+    <div class="pricing-header">
+      🔥 SPECIALE AANBIEDING — 2× EPICOOLER
     </div>
-    <div class="trust-card fade-up" style="transition-delay:0.1s">
-      <span class="t-icon">🚚</span>
-      <h4>Schnelle Lieferung</h4>
-      <p>Ultraschneller Versand weltweit</p>
-    </div>
-    <div class="trust-card fade-up" style="transition-delay:0.2s">
-      <span class="t-icon">🛡️</span>
-      <h4>365-Tage-Garantie</h4>
-      <p>Volle Zufriedenheitsgarantie</p>
-    </div>
-    <div class="trust-card fade-up" style="transition-delay:0.3s">
-      <span class="t-icon">📦</span>
-      <h4>Verfolgte Lieferung</h4>
-      <p>100% sichere &amp; verfolgte Lieferung</p>
-    </div>
-    <div class="trust-card fade-up" style="transition-delay:0.4s">
-      <span class="t-icon">⭐</span>
-      <h4>Nr. 1 Bewertet</h4>
-      <p>Weltweite Kundenzufriedenheit</p>
+    <div class="pricing-body">
+      <p class="price-original">Normale prijs: 554,95 € (2 stuks)</p>
+      <div class="price-main"><sup>€</sup>110,99</div>
+      <p class="price-per">per stuk</p>
+      <div class="price-badges">
+        <div class="p-badge green">
+          <strong>-60%</strong>
+          KORTING
+        </div>
+        <div class="p-badge blue">
+          <strong>-332,97 €</strong>
+          TOTALE BESPARING
+        </div>
+      </div>
+      <a id="btn-pricing" class="btn-buy" href="https://www.knownwalk.com/2GT22MM1/222S35HL/?uid=4970" target="_blank" rel="nofollow">
+        🛒 BESTEL NU EN BESPAAR 60%
+      </a>
+      <div class="trust-icons">
+        <span>🔒 SSL Beveiligd</span>
+        <span>🚚 Snelle levering</span>
+        <span>↩ 30-dagen garantie</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER CTA -->
-<section class="footer-cta">
-  <h2 class="fade-up">Die Leute kaufen den EpiCooler nicht nur — sie verlieben sich in ihn.</h2>
-  <p class="fade-up" style="transition-delay:0.1s">Ob als Geschenk, persönliches Upgrade oder Lösung für ein Alltagsproblem — genau deshalb ist er immer wieder ausverkauft.</p>
-  <a id="btn-footer-cta" class="btn-primary fade-up" href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966"
-     target="_blank" rel="nofollow" style="max-width:480px; margin:0 auto; display:block; transition-delay:0.2s">
-    JETZT SONDERPREIS SICHERN →
-  </a>
+<!-- ═══════════════ TRUST STRIP ═══════════════ -->
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="ts-card fade-up">
+      <span class="ti">🔒</span>
+      <h4>Veilig betalen</h4>
+      <p>256-bit SSL versleuteling</p>
+    </div>
+    <div class="ts-card fade-up" style="transition-delay:.1s">
+      <span class="ti">🚚</span>
+      <h4>Snelle levering</h4>
+      <p>Bezorging in heel Nederland</p>
+    </div>
+    <div class="ts-card fade-up" style="transition-delay:.2s">
+      <span class="ti">🛡️</span>
+      <h4>30-Dagen Garantie</h4>
+      <p>Volledige terugbetalingsgarantie</p>
+    </div>
+    <div class="ts-card fade-up" style="transition-delay:.3s">
+      <span class="ti">📦</span>
+      <h4>Track &amp; Trace</h4>
+      <p>100% getraceerde levering</p>
+    </div>
+    <div class="ts-card fade-up" style="transition-delay:.4s">
+      <span class="ti">⭐</span>
+      <h4>Nr. 1 Beoordeeld</h4>
+      <p>+12.000 vijfsterrenbeoordelingen</p>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
-  <p>© 2026 EpiCooler. Alle Rechte vorbehalten.</p>
+  <p>© 2026 EpiCooler Nederland. Alle rechten voorbehouden. | <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;">Privacybeleid</a></p>
 </footer>
 
+<!-- ═══════════════ STICKY MOBILE CTA ═══════════════ -->
+<div class="sticky-cta">
+  <a id="btn-sticky" href="https://www.knownwalk.com/2GT22MM1/222S35HL/?uid=4970" target="_blank" rel="nofollow">
+    🛒 BESTEL NU — 60% KORTING
+  </a>
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
 <script>
-  // ── Scroll animations ──
-  const observer = new IntersectionObserver((entries) => {
+  // Scroll animations
+  const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-  // ── Countdown timer (24h from load) ──
+  // Countdown
   (function() {
-    const saved = localStorage.getItem('epicooler_deadline');
-    let deadline;
-    if (saved) {
-      deadline = parseInt(saved, 10);
-    } else {
-      deadline = Date.now() + 23 * 3600 * 1000 + 59 * 60 * 1000 + 59 * 1000;
-      localStorage.setItem('epicooler_deadline', deadline);
+    const key = 'epicooler_nl_deadline';
+    let deadline = parseInt(localStorage.getItem(key), 10);
+    if (!deadline || deadline < Date.now()) {
+      deadline = Date.now() + 23 * 3600000 + 47 * 60000 + 33000;
+      localStorage.setItem(key, deadline);
     }
-
-    function update() {
-      const diff = deadline - Date.now();
-      if (diff <= 0) {
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
-        return;
-      }
+    function tick() {
+      const diff = Math.max(0, deadline - Date.now());
       const h = Math.floor(diff / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
@@ -716,9 +862,20 @@
       document.getElementById('minutes').textContent = String(m).padStart(2,'0');
       document.getElementById('seconds').textContent = String(s).padStart(2,'0');
     }
-    update();
-    setInterval(update, 1000);
+    tick();
+    setInterval(tick, 1000);
   })();
+
+  // Hide sticky CTA when pricing section is visible
+  const pricingSection = document.querySelector('.pricing');
+  const stickyEl = document.querySelector('.sticky-cta');
+  const pricingObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) stickyEl.style.display = 'none';
+      else stickyEl.style.display = 'block';
+    });
+  }, { threshold: 0.3 });
+  if (pricingSection) pricingObs.observe(pricingSection);
 </script>
 
 </body>
